@@ -3,14 +3,14 @@ version: '>= 0.14.0'
 formatter: markdown table
 
 content: |-
-  [![Tests](https://github.com/netascode/terraform-aci-scaffolding/actions/workflows/test.yml/badge.svg)](https://github.com/netascode/terraform-aci-scaffolding/actions/workflows/test.yml)
+  [![Tests](https://github.com/netascode/terraform-aci-bgp-timer-policy/actions/workflows/test.yml/badge.svg)](https://github.com/netascode/terraform-aci-bgp-timer-policy/actions/workflows/test.yml)
 
-  # Terraform ACI Scaffolding Module
+  # Terraform ACI BGP Timer Policy Module
 
-  Description
+  Manages ACI BGP Timer Policy
 
   Location in GUI:
-  `Tenants` » `XXX`
+  `Tenants` » `XXX` » `Policies` » `Protocol` » `BGP` » `BGP Timers`
 
   ## Examples
 

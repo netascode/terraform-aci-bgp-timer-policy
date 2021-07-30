@@ -1,5 +1,5 @@
 <!-- BEGIN_TF_DOCS -->
-# Scaffolding Example
+# BGP Timer Policy Example
 
 To run this example you need to execute:
 
@@ -12,12 +12,17 @@ $ terraform apply
 Note that this example will create resources. Resources can be destroyed with `terraform destroy`.
 
 ```hcl
-module "aci_scaffolding" {
-  source = "netascode/scaffolding/aci"
+module "aci_bgp_timer_policy" {
+  source = "netascode/bgp-timer-policy/aci"
 
-  name        = "ABC"
-  alias       = "ABC-ALIAS"
-  description = "My Description"
+  tenant                  = "ABC"
+  name                    = "BGP1"
+  description             = "My Description"
+  graceful_restart_helper = false
+  hold_interval           = 60
+  keepalive_interval      = 30
+  maximum_as_limit        = 20
+  stale_interval          = "120"
 }
 
 ```

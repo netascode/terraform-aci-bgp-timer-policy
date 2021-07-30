@@ -1,9 +1,13 @@
-resource "aci_rest" "fvTenant" {
-  dn         = "uni/tn-${var.name}"
-  class_name = "fvTenant"
+resource "aci_rest" "bgpCtxPol" {
+  dn         = "uni/tn-${var.tenant}/bgpCtxP-${var.name}"
+  class_name = "bgpCtxPol"
   content = {
-    name      = var.name
-    nameAlias = var.alias
-    descr     = var.description
+    name       = var.name
+    descr      = var.description
+    grCtrl     = var.graceful_restart_helper == true ? "helper" : ""
+    holdIntvl  = var.hold_interval
+    kaIntvl    = var.keepalive_interval
+    maxAsLimit = var.maximum_as_limit
+    staleIntvl = var.stale_interval
   }
 }
