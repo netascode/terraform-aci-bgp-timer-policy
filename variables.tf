@@ -36,7 +36,7 @@ variable "graceful_restart_helper" {
 }
 
 variable "hold_interval" {
-  description = "Hold interval"
+  description = "Hold interval, Allowed values: 0, 3-3600."
   type        = number
   default     = 180
 
@@ -47,7 +47,7 @@ variable "hold_interval" {
 }
 
 variable "keepalive_interval" {
-  description = "Keepalive interval"
+  description = "Keepalive interval, Minimum value: 0, Maximum value: 3600."
   type        = number
   default     = 60
 
@@ -58,7 +58,7 @@ variable "keepalive_interval" {
 }
 
 variable "maximum_as_limit" {
-  description = "Maximum AS limit"
+  description = "Maximum AS limit, Minimum value: 0, Maximum value: 2000."
   type        = number
   default     = 0
 
@@ -69,12 +69,12 @@ variable "maximum_as_limit" {
 }
 
 variable "stale_interval" {
-  description = "Stale interval"
+  description = "Stale interval, Allowed values: `default` or a number between 1 and 3600."
   type        = string
   default     = "default"
 
   validation {
     condition     = var.stale_interval == "default" || try(tonumber(var.stale_interval) >= 1 && tonumber(var.stale_interval) <= 3600, false)
-    error_message = "Allowed values: `default` or number between 1 and 3600."
+    error_message = "Allowed values: `default` or a number between 1 and 3600."
   }
 }
