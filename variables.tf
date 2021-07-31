@@ -41,7 +41,7 @@ variable "hold_interval" {
   default     = 180
 
   validation {
-    condition     = var.hold_interval == 0 || var.hold_interval >= 3 || var.hold_interval <= 3600
+    condition     = var.hold_interval == 0 || (var.hold_interval >= 3 && var.hold_interval <= 3600)
     error_message = "Allowed values: 0, 3-3600."
   }
 }
@@ -52,7 +52,7 @@ variable "keepalive_interval" {
   default     = 60
 
   validation {
-    condition     = var.keepalive_interval >= 0 || var.keepalive_interval <= 3600
+    condition     = var.keepalive_interval >= 0 && var.keepalive_interval <= 3600
     error_message = "Minimum value: 0, Maximum value: 3600."
   }
 }
@@ -63,7 +63,7 @@ variable "maximum_as_limit" {
   default     = 0
 
   validation {
-    condition     = var.maximum_as_limit >= 0 || var.maximum_as_limit <= 2000
+    condition     = var.maximum_as_limit >= 0 && var.maximum_as_limit <= 2000
     error_message = "Minimum value: 0, Maximum value: 2000."
   }
 }
