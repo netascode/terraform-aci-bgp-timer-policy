@@ -1,5 +1,5 @@
 variable "tenant" {
-  description = "Tenant name"
+  description = "Tenant name."
   type        = string
 
   validation {
@@ -9,7 +9,7 @@ variable "tenant" {
 }
 
 variable "name" {
-  description = "BGP timer policy name"
+  description = "BGP timer policy name."
   type        = string
 
   validation {
@@ -19,7 +19,7 @@ variable "name" {
 }
 
 variable "description" {
-  description = "Description"
+  description = "Description."
   type        = string
   default     = ""
 
@@ -30,13 +30,13 @@ variable "description" {
 }
 
 variable "graceful_restart_helper" {
-  description = "Graceful restart helper"
+  description = "Graceful restart helper."
   type        = bool
   default     = true
 }
 
 variable "hold_interval" {
-  description = "Hold interval, Allowed values: 0, 3-3600."
+  description = "Hold interval. Allowed values: 0, 3-3600."
   type        = number
   default     = 180
 
@@ -47,29 +47,29 @@ variable "hold_interval" {
 }
 
 variable "keepalive_interval" {
-  description = "Keepalive interval, Minimum value: 0, Maximum value: 3600."
+  description = "Keepalive interval. Minimum value: 0. Maximum value: 3600."
   type        = number
   default     = 60
 
   validation {
     condition     = var.keepalive_interval >= 0 && var.keepalive_interval <= 3600
-    error_message = "Minimum value: 0, Maximum value: 3600."
+    error_message = "Minimum value: 0. Maximum value: 3600."
   }
 }
 
 variable "maximum_as_limit" {
-  description = "Maximum AS limit, Minimum value: 0, Maximum value: 2000."
+  description = "Maximum AS limit. Minimum value: 0. Maximum value: 2000."
   type        = number
   default     = 0
 
   validation {
     condition     = var.maximum_as_limit >= 0 && var.maximum_as_limit <= 2000
-    error_message = "Minimum value: 0, Maximum value: 2000."
+    error_message = "Minimum value: 0. Maximum value: 2000."
   }
 }
 
 variable "stale_interval" {
-  description = "Stale interval, Allowed values: `default` or a number between 1 and 3600."
+  description = "Stale interval. Allowed values: `default` or a number between 1 and 3600."
   type        = string
   default     = "default"
 

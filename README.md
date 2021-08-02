@@ -43,14 +43,14 @@ module "aci_bgp_timer_policy" {
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_tenant"></a> [tenant](#input\_tenant) | Tenant name | `string` | n/a | yes |
-| <a name="input_name"></a> [name](#input\_name) | BGP timer policy name | `string` | n/a | yes |
-| <a name="input_description"></a> [description](#input\_description) | Description | `string` | `""` | no |
-| <a name="input_graceful_restart_helper"></a> [graceful\_restart\_helper](#input\_graceful\_restart\_helper) | Graceful restart helper | `bool` | `true` | no |
-| <a name="input_hold_interval"></a> [hold\_interval](#input\_hold\_interval) | Hold interval, Allowed values: 0, 3-3600. | `number` | `180` | no |
-| <a name="input_keepalive_interval"></a> [keepalive\_interval](#input\_keepalive\_interval) | Keepalive interval, Minimum value: 0, Maximum value: 3600. | `number` | `60` | no |
-| <a name="input_maximum_as_limit"></a> [maximum\_as\_limit](#input\_maximum\_as\_limit) | Maximum AS limit, Minimum value: 0, Maximum value: 2000. | `number` | `0` | no |
-| <a name="input_stale_interval"></a> [stale\_interval](#input\_stale\_interval) | Stale interval, Allowed values: `default` or a number between 1 and 3600. | `string` | `"default"` | no |
+| <a name="input_tenant"></a> [tenant](#input\_tenant) | Tenant name. | `string` | n/a | yes |
+| <a name="input_name"></a> [name](#input\_name) | BGP timer policy name. | `string` | n/a | yes |
+| <a name="input_description"></a> [description](#input\_description) | Description. | `string` | `""` | no |
+| <a name="input_graceful_restart_helper"></a> [graceful\_restart\_helper](#input\_graceful\_restart\_helper) | Graceful restart helper. | `bool` | `true` | no |
+| <a name="input_hold_interval"></a> [hold\_interval](#input\_hold\_interval) | Hold interval. Allowed values: 0, 3-3600. | `number` | `180` | no |
+| <a name="input_keepalive_interval"></a> [keepalive\_interval](#input\_keepalive\_interval) | Keepalive interval. Minimum value: 0. Maximum value: 3600. | `number` | `60` | no |
+| <a name="input_maximum_as_limit"></a> [maximum\_as\_limit](#input\_maximum\_as\_limit) | Maximum AS limit. Minimum value: 0. Maximum value: 2000. | `number` | `0` | no |
+| <a name="input_stale_interval"></a> [stale\_interval](#input\_stale\_interval) | Stale interval. Allowed values: `default` or a number between 1 and 3600. | `string` | `"default"` | no |
 
 ## Outputs
 
