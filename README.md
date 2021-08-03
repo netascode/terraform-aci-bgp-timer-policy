@@ -56,8 +56,8 @@ module "aci_bgp_timer_policy" {
 
 | Name | Description |
 |------|-------------|
-| <a name="output_dn"></a> [dn](#output\_dn) | Distinguished name of `bgpCtxPol` object |
-| <a name="output_name"></a> [name](#output\_name) | BGP timer policy name |
+| <a name="output_dn"></a> [dn](#output\_dn) | Distinguished name of `bgpCtxPol` object. |
+| <a name="output_name"></a> [name](#output\_name) | BGP timer policy name. |
 
 ## Resources
 
