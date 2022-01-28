@@ -1,4 +1,4 @@
-resource "aci_rest" "bgpCtxPol" {
+resource "aci_rest_managed" "bgpCtxPol" {
   dn         = "uni/tn-${var.tenant}/bgpCtxP-${var.name}"
   class_name = "bgpCtxPol"
   content = {

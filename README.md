@@ -13,7 +13,7 @@ Location in GUI:
 ```hcl
 module "aci_bgp_timer_policy" {
   source  = "netascode/bgp-timer-policy/aci"
-  version = ">= 0.0.1"
+  version = ">= 0.1.0"
 
   tenant                  = "ABC"
   name                    = "BGP1"
@@ -24,7 +24,6 @@ module "aci_bgp_timer_policy" {
   maximum_as_limit        = 20
   stale_interval          = "120"
 }
-
 ```
 
 ## Requirements
@@ -32,13 +31,13 @@ module "aci_bgp_timer_policy" {
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0.0 |
-| <a name="requirement_aci"></a> [aci](#requirement\_aci) | >= 0.2.0 |
+| <a name="requirement_aci"></a> [aci](#requirement\_aci) | >= 2.0.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aci"></a> [aci](#provider\_aci) | >= 0.2.0 |
+| <a name="provider_aci"></a> [aci](#provider\_aci) | >= 2.0.0 |
 
 ## Inputs
 
@@ -64,5 +63,5 @@ module "aci_bgp_timer_policy" {
 
 | Name | Type |
 |------|------|
-| [aci_rest.bgpCtxPol](https://registry.terraform.io/providers/netascode/aci/latest/docs/resources/rest) | resource |
+| [aci_rest_managed.bgpCtxPol](https://registry.terraform.io/providers/CiscoDevNet/aci/latest/docs/resources/rest_managed) | resource |
 <!-- END_TF_DOCS -->
